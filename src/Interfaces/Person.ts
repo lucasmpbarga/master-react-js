@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react'
 
-export interface IPerson {
+export interface Person {
     name: string
     age: number
     children?: string

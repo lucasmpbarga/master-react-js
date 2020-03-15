@@ -1,8 +1,8 @@
 import React from 'react'
-import { IPerson } from '../../Interfaces/IPerson'
 import './Person.css'
+import { Person } from '../../Interfaces/Person'
 
-const Person = (props: IPerson) => {
+const Person = (props: Person) => {
     return (
         <div className="person">
             <p>
