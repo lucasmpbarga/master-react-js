@@ -1,5 +1,8 @@
+import { ChangeEvent } from 'react'
+
 export interface IPerson {
-  name: String;
-  age: Number;
-  children?: String;
+    name: string
+    age: number
+    children?: string
+    change?: () => void
 }
