@@ -1,4 +1,4 @@
-export interface Person {
+export interface IPerson {
     name: string
     age: number
     children?: string
