@@ -6,8 +6,8 @@ import Person from './Components/Person/Person'
 import { Constants } from './Constants'
 import { IPerson } from './Interfaces/IPerson'
 
-const StyledButton = styled.button`
-    background-color: ${Colors.GREEN};
+const StyledButton = styled.button<{ showPersons: boolean }>`
+    background-color: ${props => (props.showPersons ? Colors.RED : Colors.GREEN)};
     color: white;
     font: inherit;
     border: 1px solid blue;
@@ -15,7 +15,7 @@ const StyledButton = styled.button`
     cursor: pointer;
 
     &:hover {
-        background-color: lightgreen;
+        background-color: ${props => (props.showPersons ? Colors.SALMON : Colors.LIGHT_GREEN)};
         color: black;
     }
 `
@@ -75,6 +75,7 @@ function App() {
         setPersons(newPersons)
     }
 
+    const newLocal = 'asd'
     // const hoverButton = () => {
     //     setMouseHover(!mouseHover)
     //     dynamicButtonColors(showPersons, !mouseHover)
@@ -94,7 +95,7 @@ function App() {
         <div className="App">
             <h1>{Constants.HI_APP}</h1>
             <h2>{Constants.REALLY_WORKING}</h2>
-            <StyledButton onClick={changeShowPersons}>
+            <StyledButton showPersons={showPersons} onClick={changeShowPersons}>
                 {`${showPersons ? Constants.CLEAR : Constants.SHOW} ${Constants.PERSONS}`}
             </StyledButton>
             {showPersons && (
