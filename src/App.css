@@ -36,17 +36,15 @@
         transform: rotate(360deg);
     }
 }
-/* 
+
 .button {
-    border: none;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-} */
+    font: inherit;
+    border: 1px solid blue;
+    padding: 8px;
+    cursor: pointer;
+}
 
 .button:hover {
-    cursor: pointer;
+    color: black;
 }
