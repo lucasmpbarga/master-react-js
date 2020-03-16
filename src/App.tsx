@@ -43,10 +43,6 @@ function App() {
 
     const [showPersons, setShowPersons] = useState(false)
 
-    // const [buttonBackgroundColor, setButtonBackgroundColor] = useState(Colors.GREEN)
-
-    // const [mouseHover, setMouseHover] = useState(false)
-
     const changeNameHandler = (event: React.FormEvent<HTMLInputElement>, personId: number) => {
         const personIndex = [...persons].findIndex(person => person.id === personId)
 
@@ -66,7 +62,6 @@ function App() {
             setPersons(defaultPersons)
         }
         setShowPersons(!showPersons)
-        // dynamicButtonColors(!showPersons, mouseHover)
     }
 
     const deletePerson = (index: number) => {
@@ -74,22 +69,6 @@ function App() {
         newPersons.splice(index, 1)
         setPersons(newPersons)
     }
-
-    const newLocal = 'asd'
-    // const hoverButton = () => {
-    //     setMouseHover(!mouseHover)
-    //     dynamicButtonColors(showPersons, !mouseHover)
-    // }
-
-    // const dynamicButtonColors = (currentShowPersons: boolean, currentMouseHover: boolean) => {
-    //     let color = buttonBackgroundColor
-    //     if (!currentShowPersons) {
-    //         color = currentMouseHover ? Colors.LIGHT_GREEN : Colors.GREEN
-    //     } else {
-    //         color = currentMouseHover ? Colors.SALMON : Colors.RED
-    //     }
-    //     setButtonBackgroundColor(color)
-    // }
 
     return (
         <div className="App">
