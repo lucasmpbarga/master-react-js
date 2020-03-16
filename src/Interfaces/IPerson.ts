@@ -1,6 +1,7 @@
 export interface IPerson {
+    id: number
     name: string
     age: number
-    change?: () => void
+    change?: (event: React.FormEvent<HTMLInputElement>) => void
     click?: () => void
 }
